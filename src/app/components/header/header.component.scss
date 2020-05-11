@@ -1,0 +1,19 @@
+/*variables*/
+$white:#fff;
+$ltGrey:#c2c2c2;
+$green:#28cd50;
+/****/
+
+header{ 
+    width:100%; height:auto;
+
+    nav{
+        width:inherit; min-height:70px; background-color:$white !important; border-top-color:$white; border-left-color:$white; border-right-color:$white; display:flex; justify-content:flex-start; align-items:center; box-shadow:0 1px 4px $ltGrey;
+        @media screen and (max-width:997px){ justify-content:center; }
+
+        img{ 
+            position:absolute; margin-left:20px;
+            @media screen and (max-width:997px){ margin:auto; }
+        }
+    }
+} 

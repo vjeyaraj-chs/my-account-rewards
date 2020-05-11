@@ -1,0 +1,121 @@
+//variables
+$white:#fff;
+$black:#000;
+$green:#28cd50;
+$grey: #686d77;
+$grey1: #a4a4a4;
+$grey2:#c2c2c2;
+$grey3:#eee;
+$alertRed:#a94442;
+$link-hover-color:#21C043;
+$button-hover-color:#21c043;
+////
+
+/*loading screen*/
+#loadingScreenWrap{
+    .loadingScreen{ 
+        width:100%; height:100%; position:fixed; top:0; bottom:0; left:0; right:0; background-color:$black; opacity:.4; z-index:9999998;
+    } 
+
+    i,p,strong,img{ 
+        width:186px; position:fixed; top:30%; left:50%; margin-left:-93px; color:$green; z-index:9999999;
+    }
+}
+/**/
+
+/*ngx bootstrap modal*/
+.modal-backdrop{ 
+    z-index:1000000;
+}
+
+modal-container{ 
+    z-index:1000001 !important;
+}
+/**/
+
+ngb-alert{
+    &.alert-danger{ 
+        a{
+            color:$alertRed;
+            &:hover, &:active, &:focus{ color:$alertRed; }
+        }
+    }
+}
+
+/*bootstrap select plugin*/
+.bootstrap-select{
+    .dropdown-toggle{ height:45px; } 
+     
+    button{ 
+        padding:12px 15px; border:1px solid #ccc !important;
+
+        &.isActive{ 
+            background-color:$green;
+
+            .filter-option-inner{
+                .filter-option-inner-inner{
+                    color:$white;
+                }    
+            }
+        }
+    }
+
+
+    .dropdown-menu { z-index:99999999; }
+    &.form-control{ line-height:0; }
+
+    .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover{ background-color:$green; background-image:linear-gradient(to bottom, $green, $green 100%); }
+    .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus { text-decoration:none; color:$white !important; background-color:$green !important; background-image:linear-gradient(to bottom, $green, $green 100%); }
+
+    select option[selected]{ background-color:$green; }
+ }
+/**/
+
+body{
+    background-color:$grey3;
+
+    main{ 
+        width:100%; position:relative; padding-top:120px;
+
+        &.row{ margin:0; }
+
+        .card{
+            width:97%; min-height:50vh; margin:auto; padding:20px;
+            @media screen and (max-width:997px){ width:100%; }
+
+            button{ 
+                color:$white; background-color:$green; border-radius:3px !important; transition:background-color 300ms ease-out;
+
+                &.btnLg{ 
+                    width:150px; height:50px; font-size:1.125em;
+                }
+
+                &:hover, &:active, &:focus{ 
+                    color:$white !important; background-color:$button-hover-color;
+                }
+
+                &[disabled="disabled"]{ 
+                    opacity:.3 !important;
+                }
+
+                &.btn{ 
+                    &.btnPill{ 
+                        width:100px; margin-right:10px; border-radius:23px !important; background-color:$grey2;
+                    }
+
+                    &.active{ 
+                        background-color:$button-hover-color; outline:0 !important;
+                    }
+                }
+            }
+
+            a{ 
+                color:$green; cursor:pointer; transition:.3s; text-decoration:underline;
+
+                &:hover, &:active, &:focus{ 
+                    color:$link-hover-color !important;
+                }
+            }
+        }
+    }
+}

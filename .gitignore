@@ -1,0 +1,64 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# firebase local configuration
+/__
+/__/*
+/__/**
+yarn-error.log
+yarn.lock
+
+
+# dependencies
+/node_modules
+/functions/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+frontend/portal/.editorconfig
+*.prefs
+frontend/portal/node/
+*.classpath
+*.prefs
+frontend/portal/node_modules/
+server/webapp/target/
+server/webapp/src/main/resources/static/
+*.project
+frontend/portal/package-lock.json
+server/endpoints/target/
+
